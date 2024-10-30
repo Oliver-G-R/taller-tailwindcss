@@ -6,12 +6,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <title>Taller de tailwind css</title>
+
+    <!-- 
+      Cuando se usa un cdn para probar tailwindcss, la configuración extra se puede extender en un objeto de configuración de js
+
+      Aquí podemos crear nuestras propiad utilidades personalizadas y la implementación de plugins
+    -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            gridTemplateColumns: {
+              'auto-fit-250': 'repeat(auto-fit,minmax(250px,1fr))',
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body class="dark:bg-[#0b1121] bg-gray-100">
     <header
       class="fixed w-full dark:bg-indigo-950 bg-gray-100 border-gray-300 border-b-2 top-0 dark:border-gray-800"
     >
-      <nav class="max-w-3xl m-auto py-4 flex items-center gap-4">
+      <nav class="max-md:w-[90%] max-w-3xl m-auto py-4 flex items-center gap-4">
         <h1 class="dark:text-white text-indigo-950 font-black text-xl">
           Taller de Tailwind Css
         </h1>
@@ -24,7 +42,7 @@
     <!-- 
       Contenido principal
     -->
-    <main class="max-w-3xl m-auto space-y-5 py-5 mt-[100px]">
+    <main class="max-w-3xl m-auto space-y-5 py-5 mt-[100px] max-md:w-[90%]">
       <!-- 
         Clases para texto
       -->
@@ -96,7 +114,7 @@
       </section>
 
       <!-- 
-        Padding, margin, radius, sombraas 
+        Tarjetas - Padding, margin, radius, sombraas 
       -->
 
       <section>
@@ -121,7 +139,11 @@
           </div>
           <div class="bg-white rounded-lg shadow-lg flex items-center">
             <picture class="block h-full w-1/2">
-              <img class="h-full w-full object-cover" src="./cat.webp" alt="" />
+              <img
+                class="h-full w-full object-cover"
+                src="./assets/cat.webp"
+                alt=""
+              />
             </picture>
             <div class="p-2 flex-1">
               <h1 class="text-xl font-semibold">Titulo de la tarjeta</h1>
@@ -135,11 +157,62 @@
       </section>
 
       <!-- 
-        Alertas
+        Inputs
       -->
 
       <section>
-        <h1 class="text-2xl font-semibold text-white">Alertas</h1>
+        <h1 class="text-2xl font-semibold text-indigo-950 dark:text-white">
+          Inputs
+        </h1>
+
+        <div class="mt-4 grid grid-cols-auto-fit-250 gap-2">
+          <div>
+            <label
+              for="first_name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Nombre de usuario</label
+            >
+            <div
+              class="flex justify-between bg-gray-50 rounded-lg w-full p-2.5 dark:bg-gray-700 dark:border-gray-60"
+            >
+              <input
+                type="text"
+                id="first_name"
+                class="bg-transparent w-[90%] border-none outline-none text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 0 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="oli_dev"
+                required
+              />
+
+              <!-- svg user -->
+              <svg
+                class="w-6 h-6 dark:fill-gray-200"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M258.9 48C141.92 46.42 46.42 141.92 48 258.9c1.56 112.19 92.91 203.54 205.1 205.1 117 1.6 212.48-93.9 210.88-210.88C462.44 140.91 371.09 49.56 258.9 48zm126.42 327.25a4 4 0 01-6.14-.32 124.27 124.27 0 00-32.35-29.59C321.37 329 289.11 320 256 320s-65.37 9-90.83 25.34a124.24 124.24 0 00-32.35 29.58 4 4 0 01-6.14.32A175.32 175.32 0 0180 259c-1.63-97.31 78.22-178.76 175.57-179S432 158.81 432 256a175.32 175.32 0 01-46.68 119.25z"
+                />
+                <path
+                  d="M256 144c-19.72 0-37.55 7.39-50.22 20.82s-19 32-17.57 51.93C191.11 256 221.52 288 256 288s64.83-32 67.79-71.24c1.48-19.74-4.8-38.14-17.68-51.82C293.39 151.44 275.59 144 256 144z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <label
+              for="first_name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Correo</label
+            >
+            <input
+              type="email"
+              id="first_name"
+              class="outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500"
+              placeholder="oli_dev@example.com"
+              required
+            />
+          </div>
+        </div>
       </section>
     </main>
   </body>

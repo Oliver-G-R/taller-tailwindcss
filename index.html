@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <title>Taller de tailwind css</title>
+  </head>
+  <body class="bg-[#0b1121]">
+    <header class="fixed w-full bg-blue-950 top-0">
+      <nav class="max-w-3xl m-auto py-4 flex items-center gap-4">
+        <h1 class="text-white font-black text-3xl">Taller de Tailwind Css</h1>
+        <picture class="block object-cover h-10 w-10">
+          <img class="w-full h-full" src="./tailwindcss.svg" alt="" />
+        </picture>
+      </nav>
+    </header>
+
+    <!-- 
+      Contenido principal
+    -->
+    <main class="max-w-3xl m-auto space-y-5 py-5 mt-[100px]">
+      <!-- 
+        Clases para texto
+      -->
+      <section>
+        <h1 class="text-2xl font-semibold text-white">Textos</h1>
+
+        <div class="space-y-3 mt-4">
+          <h1 class="text-6xl text-blue-200 font-normal">Texto de 6xl</h1>
+          <h2 class="text-5xl text-blue-300 font-medium">Texto de 5xl</h2>
+          <h3 class="text-4xl text-blue-400 font-semibold">Texto de 4xl</h3>
+          <h4 class="text-3xl text-blue-500 font-bold">Texto de 3xl</h4>
+          <h5 class="text-2xl text-blue-600 font-black">Texto de 2xl</h5>
+          <h6 class="text-xl text-blue-700">Texto de xl</h6>
+          <h6 class="text-lg text-blue-800">Texto de lg</h6>
+          <h6 class="text-base text-blue-900">Texto de base</h6>
+          <h6 class="text-sm text-blue-950">Texto de sm</h6>
+          <h6 class="text-xs">Texto de xs</h6>
+        </div>
+      </section>
+
+      <!-- 
+        Clases utiles para crear botones
+      -->
+      <section>
+        <h1 class="text-2xl font-semibold text-white">Botones</h1>
+
+        <div class="space-y-3 mt-4">
+          <button class="py-2 px-4 text-white bg-blue-400 rounded-lg">
+            Acción
+          </button>
+          <button
+            disabled
+            class="py-2 px-4 text-white bg-blue-400 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Deshabilitado
+          </button>
+          <button class="py-2 px-4 text-white bg-green-500 rounded-lg">
+            Descargar
+
+            <svg
+              class="w-6 h-6 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="py-2 px-4 text-white bg-orange-500 rounded-lg hover:opacity-50"
+          >
+            Efecto hover
+          </button>
+
+          <button class="py-2 px-4 text-white border rounded-lg">
+            Outline
+          </button>
+        </div>
+      </section>
+
+      <!-- 
+        Padding, margin, radius, sombraas 
+      -->
+
+      <section>
+        <h1 class="text-2xl font-semibold text-white">Tarjetas</h1>
+
+        <div class="mt-4 grid grid-cols-3 gap-2">
+          <div class="bg-white rounded-lg shadow-lg p-4">
+            <h1 class="text-xl font-semibold">Titulo de la tarjeta</h1>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            </p>
+          </div>
+          <div class="dark:bg-indigo-950 bg-white rounded-lg shadow-lg p-4">
+            <h1 class="dark:text-white text-xl font-semibold">
+              Titulo de la tarjeta
+            </h1>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            </p>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg flex items-center">
+            <picture class="block h-full w-1/2">
+              <img class="h-full w-full object-cover" src="./cat.webp" alt="" />
+            </picture>
+            <div class="p-2 flex-1">
+              <h1 class="text-xl font-semibold">Titulo de la tarjeta</h1>
+              <p class="text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

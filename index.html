@@ -27,7 +27,7 @@
   </head>
   <body class="dark:bg-[#0b1121] bg-gray-100">
     <header
-      class="fixed w-full dark:bg-indigo-950 bg-gray-100 border-gray-300 border-b-2 top-0 dark:border-gray-800"
+      class="fixed w-full dark:bg-indigo-950 bg-gray-100 border-gray-300 border-b-2 top-0 dark:border-gray-800 z-50"
     >
       <nav class="max-md:w-[90%] max-w-3xl m-auto py-4 flex items-center gap-4">
         <h1 class="dark:text-white text-indigo-950 font-black text-xl">
@@ -51,17 +51,26 @@
           Textos
         </h1>
 
-        <div class="space-y-3 mt-4">
-          <h1 class="text-6xl text-blue-200 font-normal">Texto de 6xl</h1>
-          <h2 class="text-5xl text-blue-300 font-medium">Texto de 5xl</h2>
-          <h3 class="text-4xl text-blue-400 font-semibold">Texto de 4xl</h3>
-          <h4 class="text-3xl text-blue-500 font-bold">Texto de 3xl</h4>
-          <h5 class="text-2xl text-blue-600 font-black">Texto de 2xl</h5>
-          <h6 class="text-xl text-blue-700">Texto de xl</h6>
-          <h6 class="text-lg text-blue-800">Texto de lg</h6>
-          <h6 class="text-base text-blue-900">Texto de base</h6>
-          <h6 class="text-sm text-blue-950">Texto de sm</h6>
-          <h6 class="text-xs">Texto de xs</h6>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="space-y-3">
+            <h1 class="text-6xl text-blue-200 font-normal">Texto de 6xl</h1>
+            <h2 class="text-5xl text-blue-300 font-medium">Texto de 5xl</h2>
+            <h3 class="text-4xl text-blue-400 font-semibold">Texto de 4xl</h3>
+            <h4 class="text-3xl text-blue-500 font-bold">Texto de 3xl</h4>
+            <h5 class="text-2xl text-blue-600 font-black">Texto de 2xl</h5>
+            <h6 class="text-xl text-blue-700">Texto de xl</h6>
+            <h6 class="text-lg text-blue-800">Texto de lg</h6>
+            <h6 class="text-base text-blue-900">Texto de base</h6>
+            <h6 class="text-sm text-blue-950">Texto de sm</h6>
+            <h6 class="text-xs">Texto de xs</h6>
+          </div>
+
+          <picture class="relative">
+            <img src="./assets/caballero.gif" alt="" />
+            <span class="text-yellow-500 font-black text-2xl">
+              Noooooo, no de nuevo
+            </span>
+          </picture>
         </div>
       </section>
 
@@ -157,7 +166,7 @@
       </section>
 
       <!-- 
-        Inputs
+        Inputs - propiedades de input, iconos, uso de flex
       -->
 
       <section>
@@ -212,6 +221,36 @@
               required
             />
           </div>
+        </div>
+      </section>
+
+      <!-- 
+        Barra de navegación -Utilidades de flex, justify, align, flex-wrap
+      -->
+      <section>
+        <h1 class="text-2xl font-semibold text-indigo-950 dark:text-white">
+          Barra de navegación
+        </h1>
+
+        <div class="mt-4 space-y-4">
+          <nav
+            class="flex items-center justify-between dark:bg-indigo-950 bg-gray-100 py-2 px-4 rounded-lg"
+          >
+            <span class="font-bold text-indigo-950 dark:text-white">
+              Logo
+            </span>
+            <ul class="flex items-center gap-4">
+              <li>
+                <a class="text-indigo-950 dark:text-white" href="">Home</a>
+              </li>
+              <li>
+                <a class="text-indigo-950 dark:text-white" href="">Contacto</a>
+              </li>
+              <li>
+                <a class="text-indigo-950 dark:text-white" href="">Info</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </section>
     </main>
